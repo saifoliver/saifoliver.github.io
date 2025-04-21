@@ -4,113 +4,140 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohammad Saif Uddin - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1d1d1f;
+      line-height: 1.6;
+    }
+
     header {
-      background-color: #222;
-      color: white;
-      padding: 20px;
+      padding: 80px 20px;
       text-align: center;
+      background-color: #f5f5f7;
     }
-    .container {
-      padding: 40px;
-      text-align: center;
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
     }
-    hr {
-      margin: 40px 0;
-      border: none;
-      border-top: 1px solid #ccc;
+
+    header p {
+      font-size: 1.2rem;
+      color: #6e6e73;
     }
+
+    .section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: #3c3c43;
+    }
+
     .projects {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .card {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 280px;
-    }
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
+      gap: 40px;
       margin-top: 40px;
     }
+
+    .card {
+      flex: 1 1 30%;
+      background-color: #f2f2f2;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f5f5f7;
+      color: #6e6e73;
+      font-size: 0.9rem;
+    }
+
     a {
-      color: #ffa;
+      color: #0071e3;
       text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img.profile {
+      max-width: 180px;
+      border-radius: 50%;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Mohammad Saif Uddin</h1>
-    <p>Welcome to my personal portfolio website</p>
+    <p>Engineer | Car Enthusiast | Dreamer</p>
+    <img src="./A_digital_photograph_of_Mohammad_Saif_Uddin’s_pers.png" alt="Profile photo" class="profile">
   </header>
 
-  <div class="container">
-    <h2>Hello!</h2>
-    <p>I’m an aspiring engineer and car enthusiast from Hyderabad. This website is where I’ll showcase my journey, projects, and passions.</p>
-
-    <hr>
-
+  <section class="section">
     <h2>About Me</h2>
-    <p>
-      My name is Mohammad Saif Uddin. I am currently pursuing a degree in Engineering Management at Cumberland University.
-      I come from Hyderabad, a culturally rich city known for its heritage, food, and innovation. I have a strong passion for 
-      automobiles, motor engineering, and the creative world of YouTube content creation.
-    </p>
-    <p>
-      My dream is to one day own a farm on a 3-acre ranch where I can live with my family and raise animals like hens, ducks, cats, dogs, 
-      and horses. I envision a life where technology, creativity, and nature go hand-in-hand. In addition to my academic pursuits, 
-      I find joy in car meets, driving around the city, learning about engines, and watching documentaries on both human and animal behavior.
-    </p>
-    <p>
-      I enjoy gaming—especially titles like Assassin’s Creed and GTA V—and I’ve recently started learning the guitar. Working out and staying 
-      physically active is also part of my routine. This site is a space where I’ll document my journey, showcase my projects, and share my passions.
-    </p>
+    <p>I’m Mohammad Saif Uddin, an engineering management student at Cumberland University with a passion for automobiles, technology, and storytelling. From the vibrant streets of Hyderabad to the digital world of web creation, I’m on a mission to design, build, and inspire. My dream is to live on a sustainable ranch, raise animals, and grow a career blending tech and content creation.</p>
+  </section>
 
-    <hr>
-
+  <section class="section">
     <h2>Projects</h2>
     <div class="projects">
       <div class="card">
         <h3>Portfolio Website</h3>
-        <p>This website is my first web development project. It showcases my personal and professional journey.</p>
+        <p>A clean, minimal web presence designed to share my story, goals, and projects. Built with HTML, CSS, and love.</p>
       </div>
       <div class="card">
-        <h3>Car Enthusiast Vlog (Coming Soon)</h3>
-        <p>A YouTube channel project where I share car reviews, mods, and automotive events from around Hyderabad.</p>
+        <h3>Car Enthusiast Vlog</h3>
+        <p>A YouTube series-in-progress featuring car reviews, mod walkthroughs, and road trip logs across Hyderabad.</p>
       </div>
       <div class="card">
-        <h3>Farm Life Blueprint (Future Vision)</h3>
-        <p>A vision board and planning tool for my future farm — combining sustainability, family life, and tech.</p>
+        <h3>Farm Life Blueprint</h3>
+        <p>Planning and visioning tools for my future self-sufficient lifestyle — a project mixing nature, engineering, and heart.</p>
       </div>
     </div>
+  </section>
 
-    <hr>
-
+  <section class="section">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:saifuddin1231238@gmail.com">saifuddin1231238@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/saifoliver" target="_blank">github.com/saifoliver</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/saifoliver/" target="_blank">linkedin.com/in/saifoliver</a></p>
-  </div>
+  </section>
 
   <footer>
-    <p>© 2025 Mohammad Saif Uddin | All rights reserved</p>
+    <p>© 2025 Mohammad Saif Uddin. Inspired by Apple’s clean aesthetic.</p>
   </footer>
-
 </body>
 </html>
