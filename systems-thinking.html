@@ -1,75 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Systems Thinking Toolkit</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
       background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
     }
-    h1, h2 {
-      color: #333;
-    }
-    nav {
-      margin-bottom: 20px;
-    }
-    nav a {
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: bold;
-    }
-    .section {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    h1 {
+      text-align: center;
+      color: #222;
     }
     img {
+      display: block;
       max-width: 100%;
+      height: auto;
+      margin: 20px auto;
+      padding: 10px;
+      background: white;
       border: 1px solid #ccc;
-      border-radius: 5px;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">&larr; Back to Home</a>
-  </nav>
+  <section>
+    <h1>Systems Thinking Toolkit</h1>
 
-  <h1>Systems Thinking Toolkit</h1>
+    <p>As an engineering leader, understanding systems thinking is essential to anticipate complexity, feedback loops, and long-term consequences. Here's a model that represents a balancing loop system.</p>
 
-  <div class="section">
-    <h2>1. Causal Loop Diagram</h2>
-    <p>This diagram shows how increased workload lowers morale, reduces productivity, and causes project delays — which then leads to even more workload. It's a reinforcing negative loop.</p>
-    <img src="A_Causal_Loop_Diagram_(CLD)_in_a_digital_illustrat.png" alt="Causal Loop Diagram" />
-  </div>
+    <h2>Causal Loop Diagram</h2>
+    <img src="images/systems-thinking-diagram.png" alt="Causal Loop Diagram">
 
-  <div class="section">
-    <h2>2. Systems Thinking Reflection</h2>
-    <p>
-      The diagram above represents the relationship between team morale and workload distribution. It shows how heavy workloads reduce morale, which then lowers productivity and causes delays. Those delays increase pressure, which leads to even more work — creating a harmful feedback loop.
-    </p>
-    <p>
-      Systems thinking helps leaders see these patterns and root causes instead of just treating symptoms. Rather than pushing the team harder when productivity drops, a leader can look at resource planning, communication, and support systems.
-    </p>
-    <p>
-      In real-world leadership, I would use this mindset to anticipate problems early and design solutions that avoid creating new issues down the line. Systems thinking leads to healthier teams and better long-term results.
-    </p>
-  </div>
+    <h2>Reflection</h2>
+    <p>This exercise taught me that increasing work pressure without addressing quality improvements leads to a vicious cycle of rework and errors. By identifying leverage points, like allocating time for process improvement, we can stabilize systems and reduce unnecessary feedback loops. Systems thinking empowers leaders to look beyond surface problems and focus on root causes.</p>
 
-  <div class="section">
-    <h2>3. Engineering Decision Example</h2>
-    <p>
-      In a recent engineering project, a leader decided to increase the time spent on code review before launch. This delayed the release by a week but helped catch bugs early. In the end, it reduced user complaints and tech support issues while improving customer satisfaction. This is a great example of how one decision can impact many other parts of the system.
-    </p>
-  </div>
+    <h2>Example of a Systems-Based Engineering Decision</h2>
+    <p>During a past internship, my team was rushing product testing to meet tight deadlines. The short-term gain led to increased product defects and higher returns. Applying systems thinking, we introduced a feedback loop where testing time was adjusted based on past error rates. This improved quality and reduced costs in the long run.</p>
+  </section>
 
 </body>
 </html>
-Add complete systems thinking toolkit page
