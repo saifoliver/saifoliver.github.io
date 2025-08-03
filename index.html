@@ -3,30 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammad Saif Uddin - Portfolio</title>
+  <title>Mohammad Saif Uddin – Portfolio</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    html { scroll-behavior: smooth; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg-color: #000;
+      --text-color: #fff;
+      --card-bg: #111;
+      --accent: #0af;
+      --border-color: #333;
+    }
+    /* Light mode variables override */
+    .light-mode {
+      --bg-color: #fff;
+      --text-color: #000;
+      --card-bg: #f7f7f7;
+      --accent: #007bff;
+      --border-color: #ddd;
+    }
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #000;
-      color: #fff;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
       transition: background 0.3s ease, color 0.3s ease;
     }
     header {
-      background-color: #000;
+      background-color: var(--bg-color);
       padding: 60px 20px;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border-color);
     }
-    header h1 { font-size: 3em; font-weight: 700; }
-    header p { font-size: 1.25em; color: #ccc; margin-top: 10px; }
+    header h1 { font-size: 3em; font-weight: 700; margin: 0; }
+    header p  { font-size: 1.25em; color: #ccc; margin: 10px 0 0; }
+    .toggle-mode {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--card-bg);
+      color: var(--accent);
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 1px solid var(--accent);
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .profile-img {
+      border-radius: 20px;
+      width: 300px;
+      margin: 30px auto 0;
+      display: block;
+    }
     .section {
       max-width: 1000px;
       margin: 60px auto;
@@ -34,7 +66,7 @@
       text-align: center;
       opacity: 0;
       transform: translateY(20px);
-      transition: all 0.6s ease-out;
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
     .section.visible {
       opacity: 1;
@@ -53,7 +85,7 @@
       margin-top: 40px;
     }
     .card {
-      background-color: #111;
+      background-color: var(--card-bg);
       padding: 30px;
       border-radius: 20px;
       width: 300px;
@@ -64,71 +96,52 @@
       transform: translateY(-10px);
       box-shadow: 0 10px 20px rgba(255,255,255,0.05);
     }
+    .card h3 { margin-top: 0; }
+    .card p  { margin-bottom: 1em; }
+    .card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--accent);
+      color: var(--bg-color);
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .card a:hover {
+      background-color: #0056b3;
+      color: #fff;
+    }
     footer {
-      background-color: #111;
+      background-color: var(--card-bg);
       padding: 30px 20px;
       text-align: center;
       color: #888;
       font-size: 0.9em;
     }
-    a {
-      color: #0af;
+    footer a {
+      color: var(--accent);
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.3s ease;
     }
-    a:hover {
-      color: #09f;
+    footer a:hover {
       text-decoration: underline;
-    }
-    img.profile-img {
-      border-radius: 20px;
-      width: 300px;
-      margin: 30px auto 0;
-      display: block;
-    }
-    .toggle-mode {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #222;
-      color: #0af;
-      padding: 10px 15px;
-      border-radius: 10px;
-      border: 1px solid #0af;
-      cursor: pointer;
-      font-weight: 600;
-    }
-    .button-primary {
-      background-color: #007bff;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    .button-primary:hover {
-      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-
-  <div class="toggle-mode" onclick="toggleTheme()">Toggle Light/Dark</div>
+  <button class="toggle-mode" onclick="toggleTheme()">Toggle Light/Dark</button>
 
   <header>
     <h1>Mohammad Saif Uddin</h1>
-    <p>Engineer | Car Enthusiast | Future Farm Owner</p>
+    <p>Engineer&nbsp;|&nbsp;Car Enthusiast&nbsp;|&nbsp;Future Farm Owner</p>
   </header>
 
-  <img src="A_digital_photograph_of_Mohammad_Saif_Uddin’s_pers.png" alt="Mohammad Saif Uddin" class="profile-img">
+  <!-- Replace “profile.png” with the actual filename of your profile image in the repo -->
+  <img src="profile.png" alt="Profile photo of Mohammad Saif Uddin" class="profile-img">
 
   <section class="section">
     <h2>About Me</h2>
-    <p>I am currently pursuing Engineering Management at Cumberland University. I have a deep passion for automobiles, YouTube content creation, and dream of owning a farm on a 3-acre ranch with animals and family. I enjoy car meets, learning guitar, working out, and exploring tech.</p>
+    <p>I am currently pursuing Engineering Management at Cumberland University. I have a deep passion for automobiles, YouTube content creation, and dream of owning a farm on a three‑acre ranch with animals and family. I enjoy car meets, learning guitar, working out, and exploring technology.</p>
   </section>
 
   <section class="section">
@@ -136,5 +149,46 @@
     <div class="card-container">
       <div class="card">
         <h3>Portfolio Website</h3>
-        <
+        <p>A sleek personal site showcasing who I am and what I stand for. Built with HTML, CSS, and GitHub&nbsp;Pages.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="card">
+        <h3>Car Vlog (Coming Soon)</h3>
+        <p>A YouTube channel featuring car reviews, events, and custom mods from Hyderabad and beyond.</p>
+        <a href="#">Visit Channel</a>
+      </div>
+      <div class="card">
+        <h3>Farm Life Blueprint</h3>
+        <p>A vision board and digital journal planning my sustainable, tech‑powered ranch life.</p>
+        <a href="#">Explore Vision</a>
+      </div>
+    </div>
+  </section>
 
+  <footer>
+    <p>Email: <a href="mailto:saifuddin1231238@gmail.com">saifuddin1231238@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/saifoliver">github.com/saifoliver</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/saifoliver">linkedin.com/in/saifoliver</a></p>
+    <p>&copy; 2025 Mohammad Saif Uddin</p>
+  </footer>
+
+  <script>
+    // Theme toggle
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    // Reveal sections on scroll
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
