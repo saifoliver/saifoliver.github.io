@@ -1,101 +1,139 @@
- <div class="card-container">
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>A sleek personal site showcasing who I am and what I stand for. Built with HTML, CSS, and GitHub Pages.</p>
-        <a href="#">View Project</a>
-      </div>
-      <div class="card">
-        <h3>Car Vlog (Coming Soon)</h3>
-        <p>YouTube channel featuring car reviews, events, and custom mods from Hyderabad and beyond.</p>
-        <a href="#">Visit Channel</a>
-      </div>
-      <div class="card">
-        <h3>Farm Life Blueprint</h3>
-        <p>Vision board and digital journal planning my sustainable tech-powered ranch life.</p>
-        <a href="#">Explore Vision</a>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Saif Uddin - Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    header {
+      background-color: #000;
+      padding: 60px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #333;
+    }
+    header h1 { font-size: 3em; font-weight: 700; }
+    header p { font-size: 1.25em; color: #ccc; margin-top: 10px; }
+    .section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background-color: #111;
+      padding: 30px;
+      border-radius: 20px;
+      width: 300px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(255,255,255,0.05);
+    }
+    footer {
+      background-color: #111;
+      padding: 30px 20px;
+      text-align: center;
+      color: #888;
+      font-size: 0.9em;
+    }
+    a {
+      color: #0af;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #09f;
+      text-decoration: underline;
+    }
+    img.profile-img {
+      border-radius: 20px;
+      width: 300px;
+      margin: 30px auto 0;
+      display: block;
+    }
+    .toggle-mode {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #222;
+      color: #0af;
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 1px solid #0af;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .button-primary {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .button-primary:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toggle-mode" onclick="toggleTheme()">Toggle Light/Dark</div>
+
+  <header>
+    <h1>Mohammad Saif Uddin</h1>
+    <p>Engineer | Car Enthusiast | Future Farm Owner</p>
+  </header>
+
+  <img src="A_digital_photograph_of_Mohammad_Saif_Uddin’s_pers.png" alt="Mohammad Saif Uddin" class="profile-img">
+
+  <section class="section">
+    <h2>About Me</h2>
+    <p>I am currently pursuing Engineering Management at Cumberland University. I have a deep passion for automobiles, YouTube content creation, and dream of owning a farm on a 3-acre ranch with animals and family. I enjoy car meets, learning guitar, working out, and exploring tech.</p>
   </section>
 
   <section class="section">
-    <h2>Project Timeline</h2>
-    <p>This Gantt Chart outlines my 15-week plan to complete the ELR Web Portfolio, including all major milestones and deliverables.</p>
-    <div style="text-align: center;">
-      <img src="ELR_GanttChart_AppleStyle.png" alt="Gantt Chart" style="max-width: 100%; height: auto;">
-    </div>
-    <div style="text-align: center;">
-      <a href="systems-thinking.html" class="button-primary">View Systems Thinking Toolkit</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Team Communication & Feedback</h2>
-    <p>Effective leadership requires clear communication and timely feedback. Below are four professional tools developed for engineering team success.</p>
+    <h2>Projects</h2>
     <div class="card-container">
       <div class="card">
-        <h3>Communication Style Statement</h3>
-        <p>Describes how I give instructions, resolve conflict, and adapt to team diversity as an engineering leader.</p>
-        <a href="docs/Communication_Style_Statement_SaifUddin.pdf" target="_blank" class="button-primary"> Statement</a>
-      </div>
-      <div class="card">
-        <h3>Team Meeting Agenda</h3>
-        <p>A professional agenda template used for weekly project check-ins with action items and time blocks.</p>
-        <a href="docs/Meeting_Agenda_SaifUddin.pdf" target="_blank" class="button-primary">Meeting Agenda</a>
-      </div>
-      <div class="card">
-        <h3>Peer/Team Feedback Form</h3>
-        <p>An anonymous feedback form to evaluate team communication, support, and suggestions for improvement.</p>
-        <a href="docs/Team_Feedback_Form_SaifUddin.pdf" target="_blank" class="button-primary">Feedback</a>
-      </div>
-      <div class="card">
-        <h3>Performance Coaching Script</h3>
-        <p>A 1-paragraph script designed to deliver respectful feedback to underperforming teammates using a growth mindset.</p>
-        <a href="saifoliver.github.io/
-docs/Coaching_Script_SaifUddin.pdf" target="_blank" class="button-primary">Coaching Script</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ✅ NEW SECTION: CAREER STRATEGY TOOLKIT -->
-  <section class="section">
-    <h2>Career & Performance Strategy</h2>
-    <p>This section contains my career advancement plan, a personal leadership reflection, and a mock performance evaluation template designed for junior engineers.</p>
-    <div style="text-align: center;">
-      <a href="career.html" class="button-primary">View Career Strategy Toolkit</a>
-    </div>
-  </section>
-  <!-- ✅ END OF NEW SECTION -->
-
-  <section class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:saifuddin1231238@gmail.com">saifuddin1231238@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/saifoliver" target="_blank">github.com/saifoliver</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/saifoliver/" target="_blank">linkedin.com/in/saifoliver</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 Mohammad Saif Uddin | Engineering Leadership Readiness Web Portfolio
-  </footer>
-
-  <script>
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-    sections.forEach(section => observer.observe(section));
-
-    let isLight = false;
-    function toggleTheme() {
-      isLight = !isLight;
-      document.body.style.backgroundColor = isLight ? '#fff' : '#000';
-      document.body.style.color = isLight ? '#111' : '#fff';
-    }
-  </script>
+        <h3>Portfolio Website</h3>
         <
-
-</b
-
